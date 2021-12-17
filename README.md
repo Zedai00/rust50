@@ -2,9 +2,9 @@
 CS50 Library For Rust
 
 ## Usage
-append on top of the file
+append on top of the rust file
 
-`use cs50::[module];`
+`use rust50::[Module];`
 
-like
-`use cs50::get_int;`
+## Modules
+`get_int`
