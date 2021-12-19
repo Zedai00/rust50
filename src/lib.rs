@@ -19,7 +19,7 @@ pub fn get_string(q: &str) -> String {
 }
 
 // make the type same as varible
-pub fn get_int(q: &str) -> i32 {
+pub fn get_int(q: &str) -> i64 {
     loop {
         print!("{}", q);
         io::stdout().flush().unwrap();
