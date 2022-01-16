@@ -1,7 +1,8 @@
 use std::io;
 use std::io::Write;
+use std::str::FromStr;
 
-pub fn get_string(q: &str) -> String {
+pub fn get_input<T: FromStr>(q: &str) -> T {
      loop {
         print!("{}", q);
         io::stdout().flush().unwrap();
@@ -15,73 +16,5 @@ pub fn get_string(q: &str) -> String {
             Err(_) => continue,
         };
         return string
-    }
-}
-
-pub fn get_int(q: &str) -> i32 {
-    loop {
-        print!("{}", q);
-        io::stdout().flush().unwrap();
-    
-        let mut str = String::new();
-    
-        io::stdin().read_line(&mut str).ok();
-        let num = str.trim().parse();
-        let num = match num {
-            Ok(n) => n,
-            Err(_) => continue,
-        };
-        return num
-    }
-}
-
-pub fn get_long(q: &str) -> i64 {
-    loop {
-        print!("{}", q);
-        io::stdout().flush().unwrap();
-    
-        let mut str = String::new();
-    
-        io::stdin().read_line(&mut str).ok();
-        let num = str.trim().parse();
-        let num = match num {
-            Ok(n) => n,
-            Err(_) => continue,
-        };
-        return num
-    }
-}
-
-pub fn get_float(q: &str) -> f32 {
-    loop {
-        print!("{}", q);
-        io::stdout().flush().unwrap();
-    
-        let mut str = String::new();
-    
-        io::stdin().read_line(&mut str).ok();
-        let num = str.trim().parse();
-        let num = match num {
-            Ok(n) => n,
-            Err(_) => continue,
-        };
-        return num
-    }
-}
-
-pub fn get_double(q: &str) -> f64 {
-    loop {
-        print!("{}", q);
-        io::stdout().flush().unwrap();
-    
-        let mut str = String::new();
-    
-        io::stdin().read_line(&mut str).ok();
-        let num = str.trim().parse();
-        let num = match num {
-            Ok(n) => n,
-            Err(_) => continue,
-        };
-        return num
     }
 }
