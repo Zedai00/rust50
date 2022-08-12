@@ -2,7 +2,7 @@ use std::io;
 use std::io::Write;
 use std::str::FromStr;
 
-pub fn get_input<T: FromStr>(q: &str) -> T {
+pub fn input<T: FromStr>(q: &str) -> T {
      loop {
         print!("{}", q);
         io::stdout().flush().unwrap();
